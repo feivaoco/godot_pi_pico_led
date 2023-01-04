@@ -1,4 +1,4 @@
-# Pi Pico and Godot
+# Pi Pico and Godot (PROYECTO AÚN EN DESARROLLO)
 ## Comunicación entre una Pi Pico y Godot mediante la Serial
 
 ![pico_godot](/proyecto/imgs/pico_godot_der.png)
