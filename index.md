@@ -1,6 +1,9 @@
 # Pi Pico and Godot (PROYECTO AÚN EN DESARROLLO)
 ## Comunicación entre una Pi Pico y Godot mediante la Serial
 
+
+# A LO MEJOR SE CANCELA EL PROYECTO, TENGO QUE PROGRAMAR MI PROPIA COMUNICACIÓN SERIAL PARA GODOT PORQUE NO QUIERE SERVIR NINGUNO DE LOS TRES METODOS QUE ENCONTRÉ. NI MODO. DEJARÉ ESTO EN PAUSA Y ME IRÉ A HACER DEMÁS COSAS.
+
 ![pico_godot](/proyecto/imgs/pico_godot_der.png)
 
 - [Resumen](#resumen)
@@ -116,3 +119,4 @@ while (Serial.available() >0){
 ``` 
 Bueno, prosigo con el programa en Godot.
 ## Godot
+

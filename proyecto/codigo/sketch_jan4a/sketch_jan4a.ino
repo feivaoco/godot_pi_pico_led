@@ -79,6 +79,6 @@ void loop() {
 
   strSerial = "";
   
-  delay(3);
+  delay(10);
 
 }
