@@ -32,43 +32,43 @@ void loop() {
   while (Serial.available() >0){ 
     
     strSerial += char(Serial.read());
-    
-  }
-
-  if(strSerial.length() > 0)
+    if(strSerial.length() > 0)
     strUser = strSerial;
     
 
-  if (strUser.length() > 0){
-    // Serial.print(strUser);
+    if (strUser.length() > 0){
+      // Serial.print(strUser);
 
-    char str[strUser.length()];
-    for(int i = 0; i < strUser.length()-1; i++){
-      str[i] = strUser[i];
-    }       
+      char str[strUser.length()];
+      for(int i = 0; i < strUser.length()-1; i++){
+        str[i] = strUser[i];
+      }       
 
-    char* token;
-    char* rest = str;
-    int cantNumsSerial = 0;
-    while ((token = strtok_r(rest, " ", &rest))){
-      numsSerial[cantNumsSerial] = atoi(token);
-      cantNumsSerial += 1;
+      char* token;
+      char* rest = str;
+      int cantNumsSerial = 0;
+      while ((token = strtok_r(rest, " ", &rest))){
+        numsSerial[cantNumsSerial] = atoi(token);
+        cantNumsSerial += 1;
 
-    }
-    
-    // for(int i = 0; i<cantNumsSerial; i++){
-    //   Serial.print(numsSerial[i]);
-    //   Serial.print(" ");
+      }
       
-    // }
-    for(int i = 0; i < ledsNum; i++){
-      if(numsSerial[i] == 1)
-        digitalWrite(i+1,1);
-      else
-        digitalWrite(i+1,0);
+      // for(int i = 0; i<cantNumsSerial; i++){
+      //   Serial.print(numsSerial[i]);
+      //   Serial.print(" ");
+        
+      // }
+      for(int i = 0; i < ledsNum; i++){
+        if(numsSerial[i] == 1)
+          digitalWrite(i+1,1);
+        else
+          digitalWrite(i+1,0);
+      }
+      
     }
-    
   }
+
+  
   
   btn = digitalRead(btnPin);
   
